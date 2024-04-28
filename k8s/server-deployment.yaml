@@ -25,19 +25,19 @@ spec:
     spec:
       containers:
           - name: server          
-          command: ["./wait-for-it.sh"]
-          args: ["database:5432", "--", "yarn", "run:server"]
-          env:
-            - name: DATABASE_HOST
-              value: database
-            - name: DATABASE_PORT
-              value: "5432"
-          image: aditiecomm.azurecr.io/server
-          ports:
-            - containerPort: 3000
-              hostPort: 3000
-              protocol: TCP
-          volumeMounts:
+            command: ["./wait-for-it.sh"]
+            args: ["database:5432", "--", "yarn", "run:server"]
+            env:
+              - name: DATABASE_HOST
+                value: database
+              - name: DATABASE_PORT
+                value: "5432"
+            image: aditiecomm.azurecr.io/server
+            ports:
+              - containerPort: 3000
+                hostPort: 3000
+                protocol: TCP
+            volumeMounts:
             - mountPath: /usr/src/app
               name: server-claim0
       restartPolicy: Always
