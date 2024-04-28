@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
           - name: server          
-            command: ["./wait-for-it.sh"]
+            command: ["/usr/src/app/wait-for-it.sh"]
             args: ["database:5432", "--", "yarn", "run:server"]
             env:
               - name: DATABASE_HOST
