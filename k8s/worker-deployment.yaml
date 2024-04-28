@@ -35,7 +35,7 @@ spec:
               value: database
             - name: DATABASE_PORT
               value: "5432"
-          image: worker
+          image: aditiecomm.azurecr.io/worker
           name: worker
           volumeMounts:
             - mountPath: /usr/src/app

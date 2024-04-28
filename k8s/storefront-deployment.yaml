@@ -29,7 +29,7 @@ spec:
               value: shop-api
             - name: SERVER_API_PORT
               value: "3000"
-          image: storefront
+          image: aditiecomm.azurecr.io/storefront
           name: storefront
           ports:
             - containerPort: 4000

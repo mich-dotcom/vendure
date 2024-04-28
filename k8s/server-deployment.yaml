@@ -35,7 +35,7 @@ spec:
               value: database
             - name: DATABASE_PORT
               value: "5432"
-          image: server
+          image: aditiecomm.azurecr.io/server
           name: server
           ports:
             - containerPort: 3000
