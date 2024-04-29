@@ -24,8 +24,9 @@ spec:
         io.kompose.service: server
     spec:
       containers:
-          - name: server          
-            command: ["/usr/src/app/wait-for-it.sh","database:5432","--", "yarn", "run:server"]
+          - name: server
+            command: ["/bin/sh"]          
+            args: ["-c","/usr/src/app/wait-for-it.sh","database:5432","--", "yarn", "run:server"]
             env:
               - name: DATABASE_HOST
                 value: database
