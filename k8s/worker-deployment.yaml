@@ -32,9 +32,5 @@ spec:
                 value: database
               - name: DATABASE_PORT
                 value: "5432"
-            image: aditiecomm.azurecr.io/server
-            ports:
-              - containerPort: 3000
-                hostPort: 3000
-                protocol: TCP
+            image: aditiecomm.azurecr.io/worker
       restartPolicy: Always
