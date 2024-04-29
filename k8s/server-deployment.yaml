@@ -37,11 +37,4 @@ spec:
               - containerPort: 3000
                 hostPort: 3000
                 protocol: TCP
-            volumeMounts:
-            - mountPath: /usr/src/app
-              name: server-claim0
       restartPolicy: Always
-      volumes:
-        - name: server-claim0
-          persistentVolumeClaim:
-            claimName: server-claim0
