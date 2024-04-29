@@ -3,7 +3,7 @@ services:
   server:
     build:
       context: .
-      dockerfile: Dockerfile1
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
     command: ["./wait-for-it.sh", "database:5432", "--", "yarn", "start:server"]
