@@ -6,6 +6,7 @@ This is a [Docker Compose](https://docs.docker.com/compose/) project for [Vendur
 2. Vendure server
 3. Vendure worker
 4. Example storefront
+5. None
 
 This project can be used to explore Vendure, to perform performance or security testing, or as an example of how to containerize the various parts of a Vendure application.
 
