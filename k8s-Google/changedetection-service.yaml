@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: cd
+  name: changedetect
+spec:
+  ports:
+    - name: "4000"
+      port: 4000
+      targetPort: 4000
+  type: LoadBalancer
+  selector:
+    io.kompose.service: cd
