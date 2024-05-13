@@ -5,7 +5,7 @@ metadata:
     io.kompose.service: cd
   name: changedetect
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       io.kompose.service: cd
