@@ -18,9 +18,9 @@ spec:
       containers:
         - env:
             - name: PUID
-              value: 1000
+              value: "1000"
             - name: PGID
-              value: 1000
+              value: "1000"
             - name: Tz
               value: "Etc/CET"
           image: europe-west1-docker.pkg.dev/mdidedda/vendure/changedetection
