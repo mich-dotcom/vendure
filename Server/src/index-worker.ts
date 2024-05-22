@@ -10,3 +10,4 @@ setupWorker()
         console.log(err);
         process.exit(1);
     });
+#added by zzk    
