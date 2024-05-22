@@ -77,3 +77,4 @@ export const config: VendureConfig = {
     ],
 };
 
+#this is a test comment zzk
