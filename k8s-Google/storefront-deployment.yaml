@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f ../docker-compose.yml
+    kompose.version: 1.32.0 (765fde254)
+  labels:
+    io.kompose.service: storefront
+  name: storefront
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: storefront
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f ../docker-compose.yml
+        kompose.version: 1.32.0 (765fde254)
+      labels:
+        io.kompose.network/vendure-docker-compose-default: "true"
+        io.kompose.service: storefront
+    spec:
+      containers:
+        - env:
+            - name: SERVER_API_HOST
+              value: http://server
+            - name: SERVER_API_PATH
+              value: shop-api
+            - name: SERVER_API_PORT
+              value: "3000"
+          image: europe-west1-docker.pkg.dev/mdidedda/vendure/storefront
+          name: storefront
+          ports:
+            - containerPort: 4000
+              hostPort: 4000
+              protocol: TCP
+      restartPolicy: Always
